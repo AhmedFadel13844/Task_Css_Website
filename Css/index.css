@@ -1,0 +1,114 @@
+* {
+ text-transform: capitalize;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+ font-family: "Archivo", sans-serif;
+ background-color: #d8d6d6;
+}
+
+:root {
+ --color-bar: #646464;
+ --color-main: rgb(255, 208, 0);
+ --color-white: white;
+ --color-capacity: #00000041;
+
+}
+
+ul li {
+ list-style: none !important;
+ padding-top: 0 !important;
+ padding-bottom: 0 !important;
+}
+
+/* Nav */
+
+@media screen and (max-width: 600px) {
+
+ .nav_1,
+ .nav_2 {
+  display: none !important;
+ }
+}
+
+a {
+ font-weight: bold;
+}
+
+.nav_1 div:first-child li a {
+ color: var(--color-white) !important
+}
+
+.nav_1 div:first-child li a:hover {
+ color: var(--color-main) !important;
+}
+
+.nav_3,
+.nav_1 {
+ background-color: var(--color-bar);
+}
+
+.nav_3 ul li a:hover:not(.except) {
+ color: var(--color-main) !important;
+}
+
+.nav_3 ul li a.except {
+ color: var(--color-bar) !important;
+}
+
+.nav_3 ul li>a,
+.nav_3 span {
+ color: #EFEFEF !important;
+}
+
+.nav_3 .pages-a {
+ color: var(--color-bar) !important;
+}
+
+@media screen and (max-width: 580px) {
+ .nav_3 .list_Hidden {
+  display: none !important;
+ }
+}
+
+/* Bonus Section */
+.col-8 {
+ background-image: url(../Images/carousel-2.jpg);
+ position: relative;
+ height: 405px;
+ background-position: center center;
+}
+
+.col-8::after,.col-4 div:first-child::after,.col-4 div:last-child::after {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ background-color: var(--color-capacity);
+ width: 100%;
+ height: 100%;
+}
+
+.col-4 div:first-child {
+ position: relative;
+ background-image: url(../Images/offer-1.jpg);
+ height: 200px;
+ background-size: cover;
+ margin-bottom: 5px;
+ background-position: center center;
+}
+
+
+.col-4 div:last-child {
+ position: relative;
+ background-image: url(../Images/offer-2.jpg);
+ height: 200px;
+ background-size: cover;
+ background-position: center center;
+}
+
+.benefits div {background-color: var(--color-white);padding: 5px;margin: 1px;justify-content: center;}
+.benefits div i {color: var(--color-main);margin:0px 10px 0 0; font-size: 22px !important;}
