@@ -15,7 +15,7 @@ body {
   --color-bar: #646464;
   --color-main: rgb(255, 208, 0);
   --color-white: white;
-  --color-capacity: #c7c7c72a;
+  --color-capacity: #c7c7c73d;
 
 }
 
@@ -78,6 +78,10 @@ a {
   .nav_3 .list_Hidden {
     display: none !important;
   }
+}
+
+.box {
+  width: 97%;
 }
 
 /* Bonus Section */
@@ -171,6 +175,7 @@ a {
 
 
 /*  Icons Benefits */
+
 .benefits>div {
   background-color: var(--color-white);
   padding: 10px;
@@ -186,7 +191,7 @@ a {
 /* categories section */
 
 .categories h2 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   margin: 10px 0 40px;
 }
 
@@ -233,7 +238,7 @@ a {
 /* Start Features */
 
 .featured_products h2 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   margin: 10px 0 40px;
 }
 
@@ -258,6 +263,7 @@ a {
   cursor: pointer;
   transform: scale(1.2);
 }
+
 .featured_products .layout {
   position: absolute;
   width: 100%;
@@ -294,6 +300,7 @@ a {
   font-size: 1rem;
   color: yellow;
 }
+
 .featured_products .layout i {
   font-size: 1.2rem;
   color: black;
@@ -302,10 +309,55 @@ a {
   margin: 5px;
   transition: all .7s ease-in-out;
 }
+
 .featured_products .layout i:hover {
   color: var(--color-main);
   background-color: #252525;
 }
 
-
 /* End Features */
+
+
+/* Start Img-Rotate */
+.img {
+  height: 300px;
+  border: 10px solid var(--color-bg);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-capacity);
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease-in-out;
+}
+
+.img:hover img {
+  transform: rotate(5deg) scale(1.2);
+}
+
+.img .img_content {
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+}
+.img .img_content p,.img .img_content h5 {color: white;font-weight: bold;}
+.img .img_content p {font-size: 1.3rem;}
+.img .img_content h5 {font-size: 2rem;}
+.img .img_content button{cursor: pointer;}
+
+
+/* End Img-Rotate */
